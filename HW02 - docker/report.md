@@ -4,7 +4,7 @@
 1.	Создала аккаунт в YC
 1.	Установила Интерфейс командной строки Yandex Cloud (CLI) и проверила работу
 
-![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW02%20-%20docker/image/im1.jpeg)
+![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW02%20-%20docker/image/im1.jpg)
 
 
 1.	Создала сетевую структуру для ВМ 
