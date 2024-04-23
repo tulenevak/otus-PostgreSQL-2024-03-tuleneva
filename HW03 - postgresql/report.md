@@ -62,14 +62,14 @@
 
 	Ошибка
 	
-1. Посмотрела какие файлы есть sudo  ls /etc/postgresql/15/main
+1. Посмотрела какие файлы есть *sudo ls /etc/postgresql/15/main*
 	Выбрала нужный 
 	*sudo nano /etc/postgresql/15/main/postgresql.conf*
 	Исправила путь в конфигурационном файле на новый, куда было перенесено содержимое из var/lib
 
 	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im11.jpg)
 
-1. Запустила кластер sudo -u postgres pg_ctlcluster 15 main start
+1. Запустила кластер *sudo -u postgres pg_ctlcluster 15 main start*
 	Сразу не сделала скрин (закрыла случайно), при повторном запуске говорит, что кластер запущен
  
 	![рис.12](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im12.jpg)
