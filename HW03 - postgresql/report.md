@@ -5,7 +5,7 @@
 	Обновила до 15
 	*sudo apt update && sudo apt upgrade -y -q && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-15*
 	
-	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03_postgresql/image/im1.jpg)
+	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im1.jpg)
 
 1. Подключилась к БД *sudo -u postgres psql -p 5432*
 	Выполнила запрос к таблице, созданной на 1м занятии *select * from persons;*
@@ -13,15 +13,15 @@
 	Далее создала таблицу test *create table test(c1 text);*
 	*insert into test values('1');*
 
-	![рис.2](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03_postgresql/image/im2.jpg)
+	![рис.2](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im2.jpg)
  
 1. Остановила кластер
 	*sudo systemctl stop postgresql@15-main*
 	
 1. Содала, подключила диск на 10Gb
  
-	![рис.3](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03_postgresql/image/im3.jpg)
-	![рис.4](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03_postgresql/image/im4.jpg)
+	![рис.3](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im3.jpg)
+	![рис.4](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im4.jpg)
 
 1. Инициализация диска по инструкции
 	*sudo apt update*
