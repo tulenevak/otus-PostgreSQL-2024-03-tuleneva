@@ -56,25 +56,25 @@
 	*sudo chown -R postgres:postgres /mnt/data/*
 	*sudo mv /var/lib/postgresql/15 /mnt/data*
 
-1. Проверяю запустился ли кластер
+1. Проверила запустился ли кластер
 
 	![рис.10](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im10.jpg)
 
 	Ошибка
 	
-1. Смотрю какие файлы есть sudo  ls /etc/postgresql/15/main
-	Выбираю нужный 
+1. Посмотрела какие файлы есть sudo  ls /etc/postgresql/15/main
+	Выбрала нужный 
 	*sudo nano /etc/postgresql/15/main/postgresql.conf*
 	Исправила путь в конфигурационном файле на новый, куда было перенесено содержимое из var/lib
 
 	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im11.jpg)
 
-1. Запускаю кластер sudo -u postgres pg_ctlcluster 15 main start
+1. Запустила кластер sudo -u postgres pg_ctlcluster 15 main start
 	Сразу не сделала скрин (закрыла случайно), при повторном запуске говорит, что кластер запущен
  
 	![рис.12](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im12.jpg)
 
-1. Проверяю, что подключение к БД есть и данные выводятся
+1. Проверила, что подключение к БД есть, и данные выводятся
 	
 	![рис.13](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW03%20-%20postgresql/image/im13.jpg)
  
