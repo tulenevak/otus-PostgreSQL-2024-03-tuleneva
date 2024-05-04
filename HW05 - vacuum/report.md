@@ -110,11 +110,12 @@
   
   
   
-**Задача со * **
+	Задача со *   
+	
+	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im11.jpg) 	
+	
 	*Написать анонимную процедуру, в которой в цикле 10 раз обновятся все строчки в искомой таблице.  
 	Не забыть вывести номер шага цикла.*    
-  
- 	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im11.jpg) 
   
 	*create or replace procedure random_data_update()  
 	LANGUAGE plpgsql  
