@@ -44,13 +44,14 @@
 	В последней строке показывается число транзакций в секунду.
   
 	Сложно сделать какой-то вывод, не сильно различаются результаты, но как будто бы стало чуть хуже.
+	Хотелось бы понять, какие настройки и на что должны были повлиять.
 	
 	
 1.	Создала таблицу с 1 млн записей.  
 
 	![рис.3](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im3.jpg) 
  
-1.	Посмотрела размер таблицы (42MB)
+1.	Посмотрела размер таблицы (42MB).
 
 	![рис.4](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im4.jpg) 
  
@@ -117,7 +118,7 @@
 	LANGUAGE plpgsql  
 	AS $procedure$  
 	DECLARE  
-  i Int;    
+		i Int;    
 	BEGIN  
 		FOR i IN 1..10 loop  
 			UPDATE random_data  
