@@ -132,6 +132,8 @@
 	call random_data_update();     
 
 	select * from random_data;*  
-
-	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im11.jpg) 
 	
+  
+ 	![рис.11](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW05%20-%20vacuum/image/im11.jpg)    
+  
+ 
