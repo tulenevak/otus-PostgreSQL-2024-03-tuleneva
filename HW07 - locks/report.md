@@ -18,7 +18,7 @@
 	Применила настройки   
 	*select pg_reload_conf();*  
   
-	Лог файл, где видно срабатывание посмотрю позже.  
+	Лог файл, где видно срабатывание, посмотрю позже.  
   
 1. Запускаю update таблицы в разных сессиях (перед этим отключила автокоммит):  
 	(параллельно смотрю номера транзакций, чтобы понятней был лог файл:  
@@ -51,7 +51,7 @@
 	![рис.3](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW07%20-%20locks/image/im3.jpg)  
   
 	После запуска всех 3х сессий, судя по логу   
-	(команда для запуска отображения лога tail -f /var/log/postgresql/postgresql-15-main.log)  
+	(команда для запуска отображения лога tail -f /var/log/postgresql/postgresql-15-main.log),  
 	сессии находятся в режиме ожидания.  
    
 	![рис.4](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW07%20-%20locks/image/im4.jpg)  
@@ -91,19 +91,19 @@
   
 	Смотрю *select * from pg_catalog.pg_locks;*    
   
-	Вижу эти же блокировке, что и в логе  
+	Вижу эти же блокировки, что и в логе.  
    
 	![рис.5](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW07%20-%20locks/image/im5.jpg)  
   
 1. Пробую воспроизвести взаимоблокировку:      
   
-	Выолняю последовательно:  
-	*update testnm.test_locks set t='X' where i=1;	 
-	update testnm.test_locks set t='X' where i=2;  	
-	update testnm.test_locks set t='X' where i=3;  	
-	update testnm.test_locks set t='X' where i=2;  	
-	update testnm.test_locks set t='X' where i=1;  	
-	update testnm.test_locks set t='X' where i=3;*	  
+	Выполняю последовательно:  
+	*update testnm.test_locks set t='X' where i=1;*	 
+	*update testnm.test_locks set t='X' where i=2;*  	
+	*update testnm.test_locks set t='X' where i=3;*  	
+	*update testnm.test_locks set t='X' where i=2;*  	
+	*update testnm.test_locks set t='X' where i=1;*  	
+	*update testnm.test_locks set t='X' where i=3;*	  
    
 	![рис.6](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW07%20-%20locks/image/im6.jpg)  
    
