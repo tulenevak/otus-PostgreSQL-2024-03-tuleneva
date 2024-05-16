@@ -7,7 +7,7 @@
 1. Пользуюсь своей ВМ: 4 ядра ЦП, 8 ГБ ОЗУ и диск HDD на 350 ГБ  
   
 1. Установлена Postgresql 15  
-	Запускаю pgbrench на текущих настройках конфигурации
+	Запустила pgbrench на текущих настройках конфигурации  
 	*pgbench -P 30 -T 60 -c 10 -U postgres testdb*  
   
 	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW08%20-%20setting/image/im1.jpg) 
