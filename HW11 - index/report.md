@@ -15,6 +15,7 @@
 	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW11%20-%20index/image/im1.jpg) 
 
 	Проверила план запроса  
+   
 	*select * from testnm.tblindex where cname = 'Volvo';*  
   
 	![рис.2](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW11%20-%20index/image/im2.jpg) 
