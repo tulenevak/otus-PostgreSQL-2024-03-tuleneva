@@ -206,11 +206,10 @@
 	*explain analyze select co.owner_name,  cb.brand_name, cd.duration_years from car_owners co   
 	left join car_ownership_duration cd on co.id = cd.owner_id right join car_brands cb on cb.id = co.brand_id;*  
    
-	![рис.10](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW12%20-%20join/image/im10.jpg) 
+	![рис.10](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW12%20-%20join/image/im10.jpg)   
   
-   
-  =======================================================================
-    
+  	
+  	
 	Не очень поняла, что нужно было сделать в задании со *.  
 	Но т.к. в целях ДЗ было также изучение статистики, посмотрела, что выводят таблицы *pg_stat*.  
   
