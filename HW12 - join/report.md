@@ -13,9 +13,9 @@
 	*CREATE TABLE car_brands (  
 		id SERIAL PRIMARY KEY,  
 		brand_name VARCHAR(255) NOT NULL  
-		);  
+		); *   
   
-	INSERT INTO car_brands (brand_name) VALUES  
+	*INSERT INTO car_brands (brand_name) VALUES  
 	('Toyota'),  
 	('Honda'),  
 	('Ford'),  
@@ -25,9 +25,9 @@
 	('Volkswagen'),  
 	('Audi'),  
 	('Nissan'),  
-	('Hyundai');    
+	('Hyundai'); *     
     
-	CREATE TABLE car_owners (  
+	*CREATE TABLE car_owners (  
 		id SERIAL PRIMARY KEY,  
 		owner_name VARCHAR(255) NOT NULL,  
 		brand_id INT REFERENCES car_brands(id)  
@@ -72,7 +72,7 @@
 
 1. Реализовала левостороннее соединение (LEFT JOIN)   
   
-	*Основные типы соединений:*  
+	Основные типы соединений:  
 	• *INNER JOIN*: Используется для объединения строк из двух таблиц, только если они соответствуют условию соединения.  
 	• *LEFT JOIN*: Используется для объединения всех строк из первой таблицы и соответствующих строк из второй таблицы.  
 	• *RIGHT JOIN*: Используется для объединения всех строк из второй таблицы и соответствующих строк из первой таблицы.  
@@ -91,7 +91,7 @@
 	![рис.4](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW12%20-%20join/image/im4.jpg) 
   
   
-<u>1. Реализовала кросс-соединение</u>    
+1. Реализовала кросс-соединение (CROSS JOIN)      
   	
 	Соединение *CROSS JOIN* - это тип соединения, который создает декартово произведение двух таблиц.   
 	Декартово произведение - это таблица, которая содержит все возможные комбинации строк из двух исходных таблиц.   
