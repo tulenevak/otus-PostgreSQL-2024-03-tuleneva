@@ -9,12 +9,12 @@
 1. Реализовала прямое соединение 2х таблиц   
   
 	Создала 2 таблицы: "Марки машин", "Владельцы":  
-
+  
 	*CREATE TABLE car_brands (  
 		id SERIAL PRIMARY KEY,  
 		brand_name VARCHAR(255) NOT NULL  
-		); *   
-  
+		);*    
+   
 	*INSERT INTO car_brands (brand_name) VALUES  
 	('Toyota'),  
 	('Honda'),  
@@ -25,8 +25,8 @@
 	('Volkswagen'),  
 	('Audi'),  
 	('Nissan'),  
-	('Hyundai'); *     
-    
+	('Hyundai');*       
+  
 	*CREATE TABLE car_owners (  
 		id SERIAL PRIMARY KEY,  
 		owner_name VARCHAR(255) NOT NULL,  
@@ -185,9 +185,9 @@
 		(10, 6),  
 		(11, 2),  
 		(12, 4),   
-		(13, 6), 
-		(14, 1),  
-		(15, 3),  
+		(13, 6),   
+		(14, 1),    
+		(15, 3),   
 		(16, 7),  
 		(17, 5),  
 		(18, 9),  
