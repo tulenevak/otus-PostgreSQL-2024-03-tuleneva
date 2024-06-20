@@ -42,7 +42,7 @@
  
  
    
-	Создала нужную схему и таблицы  
+	1. Создала нужную схему и таблицы  
 
 	*DROP SCHEMA IF EXISTS pract_functions CASCADE;  
 	CREATE SCHEMA pract_functions;*  
