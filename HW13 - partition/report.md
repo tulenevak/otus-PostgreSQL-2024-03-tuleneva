@@ -103,7 +103,7 @@
   
 	*select pg_size_pretty(pg_table_size('flights_1'));*  
   
-	![рис.7(https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW13%20-%20partition/image/im7.jpg)   
+	![рис.7](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW13%20-%20partition/image/im7.jpg)   
     
   	
 	Основная таблица данных не содержит, но благодаря партициям select вытаскивает данные   
