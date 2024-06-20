@@ -2,6 +2,7 @@
    
 	Требуется:   
 	- научиться секционировать таблицы     
+	
   
 	**Теория**  
   
@@ -35,13 +36,13 @@
 	- Используйте секционирование с осторожностью:  Это мощная техника, но ее неправильное применение может привести к проблемам.  
   
 	**Отчет**  
-  
-1. Развернула базу flights
 	*cd /tmp/  
 	/tmp$ wget https://edu.postgrespro.ru/demo-big.zip  
 	/tmp$ chmod 777 /tmp/demo-big.zip  
 	/tmp$ unzip demo-big.zip  
 	/tmp$ sudo -u postgres psql -f demo-big-20170815.sql*  
+   
+1. Развернула базу flights
   
 	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW13%20-%20partition/image/im1.jpg)   
   
