@@ -45,6 +45,7 @@
 	/tmp$ chmod 777 /tmp/demo-big.zip  
 	/tmp$ unzip demo-big.zip  
 	/tmp$ sudo -u postgres psql -f demo-big-20170815.sql*  
+  	
 	![рис.1](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW13%20-%20partition/image/im1.jpg)   
   
   	
@@ -77,7 +78,7 @@
   	
 	Скопировала данные в новую таблицу  
   
- *insert into flights_1 (select * from flights);*  
+	*insert into flights_1 (select * from flights);*    
   
 	![рис.3](https://github.com/tulenevak/otus-PostgreSQL-2024-03-tuleneva/tree/main/HW13%20-%20partition/image/im3.jpg)   
    
