@@ -177,7 +177,8 @@
     AS  
     $$  
     DECLARE    
-    BEGIN  
+      
+	BEGIN  
         IF TG_LEVEL = 'ROW' THEN  
   
 	      INSERT INTO pract_functions.good_sum_mart(good_name, sum_sale)  
@@ -192,7 +193,8 @@
         END IF;  
   
         RETURN CASE WHEN TG_OP = 'DELETE' THEN old ELSE new END;   
-    END;    
+    END; 
+  	 
     $$ LANGUAGE plpgsql;  
  
   
