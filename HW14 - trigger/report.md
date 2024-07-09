@@ -166,38 +166,39 @@
 	Таким образом:  
 	Витрина с триггером предлагает более актуальные, консистентные и безопасные данные для отчетности по сравнению с отчетом "по требованию", особенно при изменении цен в реальном времени.    
   
+  
     
-	  
-	  
 	**Доработка по замечаниям**
   
 	Переделала функцию для триггера:  
-  
+     
 	CREATE OR REPLACE FUNCTION pract_functions.fun_change_sales_qty()  
     RETURNS trigger  
     AS  
     $$  
     DECLARE  
   
-	BEGIN  
+    BEGIN  
+ 
+        IF TG_LEVEL = 'ROW' THEN  
   
-		IF TG_LEVEL = 'ROW' THEN  
-			INSERT INTO pract_functions.good_sum_mart(good_name, sum_sale)  
-				SELECT g.good_name, sum(g.good_price * s.sales_qty) as sum_sale  
-				FROM pract_functions.goods g  
-				INNER JOIN pract_functions.sales s ON s.good_id = g.goods_id  
-				WHERE s.good_id = coalesce(new.good_id, old.good_id)  
-				GROUP BY G.good_name  
-			  on conflict (good_name) do   
-				update set sum_sale = EXCLUDED.sum_sale;   
+	      INSERT INTO pract_functions.good_sum_mart(good_name, sum_sale)  
+	        SELECT g.good_name, sum(g.good_price * s.sales_qty) as sum_sale  
+	        FROM pract_functions.goods g  
+	        INNER JOIN pract_functions.sales s ON s.good_id = g.goods_id  
+	        WHERE s.good_id = coalesce(new.good_id, old.good_id)  
+	        GROUP BY G.good_name  
+	      on conflict (good_name) do   
+	        update set sum_sale = EXCLUDED.sum_sale;  
+  
         END IF;  
   
-		RETURN CASE WHEN TG_OP = 'DELETE' THEN old ELSE new END;  
+        RETURN CASE WHEN TG_OP = 'DELETE' THEN old ELSE new END;  
   
-	END;  
+    END;  
   
-    $$ LANGUAGE plpgsql;   
-  
+    $$ LANGUAGE plpgsql;  
+ 
   
 	В таблицу sales добавила строку  
 	*insert into pract_functions.sales (good_id,sales_time,sales_qty) values (2,'01.01.2024'::Date,125);*  
