@@ -179,24 +179,22 @@
     $$  
     DECLARE  
   
-    BEGIN  
+	BEGIN  
   
-        IF TG_LEVEL = 'ROW' THEN  
-  
-	      INSERT INTO pract_functions.good_sum_mart(good_name, sum_sale)  
-	        SELECT g.good_name, sum(g.good_price * s.sales_qty) as sum_sale  
-	        FROM pract_functions.goods g  
-	        INNER JOIN pract_functions.sales s ON s.good_id = g.goods_id  
-	        WHERE s.good_id = coalesce(new.good_id, old.good_id)  
-	        GROUP BY G.good_name  
-	      on conflict (good_name) do   
-	        update set sum_sale = EXCLUDED.sum_sale;  
-  
+		IF TG_LEVEL = 'ROW' THEN  
+			INSERT INTO pract_functions.good_sum_mart(good_name, sum_sale)  
+				SELECT g.good_name, sum(g.good_price * s.sales_qty) as sum_sale  
+				FROM pract_functions.goods g  
+				INNER JOIN pract_functions.sales s ON s.good_id = g.goods_id  
+				WHERE s.good_id = coalesce(new.good_id, old.good_id)  
+				GROUP BY G.good_name  
+			  on conflict (good_name) do   
+				update set sum_sale = EXCLUDED.sum_sale;   
         END IF;  
   
-        RETURN CASE WHEN TG_OP = 'DELETE' THEN old ELSE new END;  
+		RETURN CASE WHEN TG_OP = 'DELETE' THEN old ELSE new END;  
   
-    END;  
+	END;  
   
     $$ LANGUAGE plpgsql;   
   
