@@ -173,7 +173,7 @@
   
 	Переделала функцию для триггера:  
   
-	*CREATE OR REPLACE FUNCTION pract_functions.fun_change_sales_qty()  
+	CREATE OR REPLACE FUNCTION pract_functions.fun_change_sales_qty()  
     RETURNS trigger  
     AS  
     $$  
@@ -198,7 +198,7 @@
   
     END;  
   
-    $$ LANGUAGE plpgsql;*  
+    $$ LANGUAGE plpgsql;   
   
   
 	В таблицу sales добавила строку  
